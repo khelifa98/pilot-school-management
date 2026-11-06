@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10243e">
+  <title>Pilot School Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark" id="brandMark">✈</div>
+      <div><strong id="schoolNameSide">PILOT SCHOOL</strong><small>FLIGHT OPERATIONS</small></div>
+    </div>
+    <nav id="navigation">
+      <button class="nav-item active" data-page="dashboard"><span>▦</span> Dashboard</button>
+      <button class="nav-item" data-page="entry"><span>＋</span> Data Entry</button>
+      <button class="nav-item" data-page="pilots"><span>♙</span> Pilots Database</button>
+      <button class="nav-item" data-page="hours"><span>◷</span> Flight Hours</button>
+      <button class="nav-item" data-page="exercises"><span>◎</span> Exercises</button>
+      <button class="nav-item" data-page="groups"><span>▤</span> Groups</button>
+      <button class="nav-item" data-page="analytics"><span>▥</span> Statistics &amp; Analytics</button>
+      <button class="nav-item" data-page="reports"><span>▧</span> Reports</button>
+      <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+    </nav>
+    <div class="sidebar-foot"><span class="live-dot"></span> Local database active</div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+      <div><div class="eyebrow">FLIGHT TRAINING MANAGEMENT</div><h1 id="pageTitle">Dashboard</h1></div>
+      <div class="top-actions"><span class="local-status">● Offline-ready</span><span class="date-label" id="todayLabel"></span></div>
+    </header>
+    <div id="pageContent" class="page-content"></div>
+    <footer> Pilot School Management System <span>•</span> Data stored locally on this device</footer>
+  </main>
+</div>
+<div id="toastHost" class="toast-host" aria-live="polite"></div>
+<dialog id="modal" class="modal"><form method="dialog"><button class="modal-x" aria-label="Close">×</button></form><div id="modalContent"></div></dialog>
+<script src="database.js"></script>
+<script src="analytics.js"></script>
+<script src="reports.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
